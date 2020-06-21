@@ -1,0 +1,13 @@
+<mat-card
+  *ngIf="detail.breed.length > 0"
+  class="detail-card"
+  [ngClass]="{ corgi: detail.breed.toLowerCase() === 'corgi' }"
+>
+  <p>{{ detail.breed }}</p>
+  <p>{{ detail.detail }}</p>
+  <span class="button-wrapper">
+    <button mat-raised-button color="warn" (click)="onClick()">
+      <mat-icon>close</mat-icon>
+    </button>
+  </span>
+</mat-card>
