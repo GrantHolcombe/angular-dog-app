@@ -18,7 +18,7 @@ export class AppComponent {
 
   ngOnInit() {
     this.breakpointObserver
-      .observe([Breakpoints.Small])
+      .observe([Breakpoints.Small, Breakpoints.XSmall])
       .subscribe((state: BreakpointState) => {
         if (state.matches) {
           this.mobileNav = true;
