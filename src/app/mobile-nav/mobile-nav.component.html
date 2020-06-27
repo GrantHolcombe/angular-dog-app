@@ -1,0 +1,20 @@
+<button mat-raised-button [matMenuTriggerFor]="menu">Menu</button>
+<mat-menu style="display: flex; flex-direction: column;" #menu="matMenu">
+  <button
+    mat-button
+    routerLink="/"
+    style="display: flex; width: 100%;"
+    routerLinkActive="active"
+    [routerLinkActiveOptions]="{ exact: true }"
+  >
+    Home
+  </button>
+  <button
+    mat-button
+    routerLink="/test"
+    routerLinkActive="active"
+    style="display: flex; width: 100%;"
+  >
+    Dog-e list
+  </button>
+</mat-menu>

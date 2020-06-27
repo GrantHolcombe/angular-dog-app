@@ -2,21 +2,26 @@
 <mat-toolbar class="mat-elevation-z2" color="primary">
   <span><a routerLink="/">Great Job Poopin'</a></span>
 
-  <nav>
-    <ul>
-      <li>
-        <a
-          routerLink="/"
-          routerLinkActive="active"
-          [routerLinkActiveOptions]="{ exact: true }"
-          >Home</a
-        >
-      </li>
-      <li>
-        <a routerLink="/test" routerLinkActive="active">Dog-e list</a>
-      </li>
-    </ul>
-  </nav>
+  <span *ngIf="mobileNav; else desktopNav">
+    <mobile-nav></mobile-nav>
+  </span>
+  <ng-template #desktopNav>
+    <nav>
+      <ul>
+        <li>
+          <a
+            routerLink="/"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a routerLink="/test" routerLinkActive="active">Dog-e list</a>
+        </li>
+      </ul>
+    </nav>
+  </ng-template>
 </mat-toolbar>
 
 <h1 style="text-align: center; font-family: 'Roboto';">

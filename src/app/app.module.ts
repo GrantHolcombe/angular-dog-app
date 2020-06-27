@@ -13,8 +13,10 @@ import { MatCardModule } from "@angular/material/card";
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { MatButtonModule } from "@angular/material/button";
 import { MatIconModule } from "@angular/material/icon";
-import { HomeComponent } from "./home/home.component";
 import { MatGridListModule } from "@angular/material/grid-list";
+import { MatMenuModule } from "@angular/material/menu";
+import { HomeComponent } from "./home/home.component";
+import { MobileNavComponent } from "./mobile-nav/mobile-nav.component";
 
 @NgModule({
   declarations: [
@@ -22,6 +24,7 @@ import { MatGridListModule } from "@angular/material/grid-list";
     TestCompComponent,
     HomeComponent,
     ChildTestComponent,
+    MobileNavComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,6 +38,7 @@ import { MatGridListModule } from "@angular/material/grid-list";
     MatButtonModule,
     MatIconModule,
     MatGridListModule,
+    MatMenuModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
